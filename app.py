@@ -21,7 +21,7 @@ collection = db[f"movieList_2025_09_04"]
 
 @app.route('/', methods=['GET'])
 def showMovies():
-    per_page = 15
+    per_page = 16
     page = int(request.args.get('page', 1))
     query = request.args.get('query', '').strip()
     skip = (page - 1) * per_page
